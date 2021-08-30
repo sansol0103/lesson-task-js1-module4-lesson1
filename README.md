@@ -5,7 +5,7 @@
 Make a call to the following endpoint:
 
 ```
-https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams
+https://raw.githubusercontent.com/bttmly/nba/master/data/teams.json
 ```
 
 Display the team name and city of the first 15 results, but exclude any team whose name begins with `c`.

@@ -1,4 +1,4 @@
-const url = "https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams";
+const url = "https://raw.githubusercontent.com/bttmly/nba/master/data/teams.json";
 
 const resultsContainer = document.querySelector(".results");
 
@@ -12,7 +12,7 @@ async function fetchTeams() {
         // always log and inspect the data you get from an API call to see what properties it has
         console.log(json);
 
-        const teams = json.data;
+        const teams = json;
 
         resultsContainer.innerHTML = "";
 
@@ -24,8 +24,8 @@ async function fetchTeams() {
                 break;
             }
 
-            const teamName = teams[i].full_name;
-            const city = teams[i].city;
+            const teamName = teams[i].teamName;
+            const city = teams[i].location;
 
             // we are checking for small "c" and big "C"
             if (teamName.startsWith("c") || teamName.startsWith("C")) {
